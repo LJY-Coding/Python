@@ -1,0 +1,36 @@
+USE dojo_and_ninjas_schema;
+INSERT INTO dojos (name, created_at, updated_at)
+VALUES 
+	('Boston', NOW(), NOW()),
+    ('New York', NOW(), NOW()),
+    ('Chicago', NOW(), NOW());
+    
+DELETE FROM dojos;
+
+INSERT INTO dojos (name, created_at, updated_at)
+VALUES 
+	('Boston', NOW(), NOW()),
+    ('New York', NOW(), NOW()),
+    ('Chicago', NOW(), NOW());
+    
+SELECT * FROM dojos;
+    
+INSERT INTO ninjas (first_name, last_name, age, dojo_id, created_at, updated_at)
+VALUES
+	('Tony', 'Stark', 35, 4, NOW(), NOW()),
+    ('Sherlock', 'Holmes', 28, 4, NOW(), NOW()),
+    ('Dr.', 'Strange', 33, 4, NOW(), NOW()),
+    ('Spider', 'Man', 20, 5, NOW(), NOW()),
+    ('Captain', 'America', 36, 5, NOW(), NOW()),
+    ('Black', 'Widow', 24, 5, NOW(), NOW());
+
+SELECT * FROM ninjas
+WHERE dojo_id = 4;
+
+
+SELECT * FROM ninjas
+WHERE dojo_id = 5;
+
+SELECT * FROM ninjas
+JOIN dojos ON ninjas.dojo_id = dojos.id
+WHERE ninjas.id = 6;

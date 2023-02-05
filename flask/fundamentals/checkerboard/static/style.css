@@ -1,0 +1,25 @@
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.checkboard {
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 0px;
+}
+
+    .checkboard * {
+        width: 50px;
+        height: 50px;
+    }
+
+#first_player {
+    background-color: peachpuff;
+}
+
+#second_player {
+    background-color: rebeccapurple;
+}

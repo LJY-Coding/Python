@@ -1,0 +1,16 @@
+USE names;
+SELECT * FROM names;
+
+INSERT INTO names (name, created_at, updated_at)
+VALUES 
+	('Tony Stark', NOW(), NOW());
+
+INSERT INTO names (name, created_at, updated_at)
+VALUES 
+    ('Spider Man', NOW(), NOW()),
+    ('Captin America', NOW(), NOW());    
+
+UPDATE names SET name = 'Captain America'
+WHERE id = 3;
+
+SELECT * FROM names;
